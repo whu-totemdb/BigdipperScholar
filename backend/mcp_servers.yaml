@@ -1,0 +1,9 @@
+# Run from backend/ with the project's virtual environment active.
+# No local deployment addresses or credentials are distributed.
+servers:
+  scholarly_database:
+    enabled: true
+    transport: stdio
+    command: python
+    args: ["-m", "app.mcp_servers.release_server"]
+    tool_name_prefix: false

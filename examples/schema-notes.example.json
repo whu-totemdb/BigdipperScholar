@@ -1,0 +1,10 @@
+{
+  "description": "Replace with capabilities verified on your deployment",
+  "models": ["relational", "document"],
+  "entityIdentifiers": {"paper": "your_works.work_key"},
+  "graphObjects": [],
+  "documents": [{"table": "your_works", "column": "document", "fields": ["abstract"]}],
+  "vectors": [],
+  "queryExamples": [],
+  "notes": "Do not declare MATCH or vector support unless the database provides it."
+}

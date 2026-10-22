@@ -1,0 +1,9 @@
+# Separate DB_Tools backend. Select explicitly through BIGDIPPER_DB_TOOLS_MCP_CONFIG.
+# Keep credentials in local environment variables.
+servers:
+  db_tools:
+    enabled: true
+    transport: stdio
+    command: python
+    args: ["-m", "app.mcp_servers.db_tools_server"]
+    tool_name_prefix: false

@@ -1,0 +1,10 @@
+servers:
+  scholarly_database:
+    enabled: true
+    transport: http
+    url: "https://your-mcp-service.example/mcp"
+    api_key_env: BIGDIPPER_REMOTE_MCP_KEY
+    api_key_header: x-internal-key
+    timeout_seconds: 60
+    sse_read_timeout_seconds: 120
+    tool_name_prefix: false

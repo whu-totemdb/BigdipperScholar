@@ -1,0 +1,9 @@
+WITH query_vector AS (
+  SELECT %(embedding)s::vector AS embedding
+)
+SELECT w.work_key AS paperid, w.paper_title AS title,
+       w.publication_year AS year, w.document->>'abstract' AS abstract,
+       1 - (w.embedding <=> q.embedding) AS score
+FROM your_works w CROSS JOIN query_vector q
+ORDER BY w.embedding <=> q.embedding
+LIMIT %(limit)s
